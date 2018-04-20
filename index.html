@@ -16,21 +16,51 @@
 <header class="blog-header py-3">
 	<h1 class="text-dark text-center">Leela中文网站</h1>
 </header>
-<div class="nav-scroller py-1 mb-2">
+<div class="nav-scroller py-1 mb-2 border-bottom">
 	<nav class="nav d-flex justify-content-between">
 		<a class="p-2 text-muted" href="#">Leela介绍</a>
 		<a class="p-2 text-muted" href="news">最新动态</a>
-		<a class="p-2 text-muted" href="training.html">训练程序</a>
-		<a class="p-2 text-muted" href="/playgo">对弈软件</a>
-		<a class="p-2 text-muted" href="https://hhpetra.github.io/leelachinese/lizzie">局面分析</a>
+		<a class="p-2 text-muted" href="training">训练程序</a>
+		<a class="p-2 text-muted" href="playgo">对弈软件</a>
+		<a class="p-2 text-muted" href="lizzie">局面分析</a>
 		<a class="p-2 text-muted" href="http://zero.sjeng.org/">英文官网</a>
 	</nav>
 </div>
 </div>
-<main>
-<h1>主页</h1>
-<p>网站建设中</p>
-<img src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/gcpPicture/gcpIntroduction.jpg">
+<main class="container">
+<div class="card mb-4">
+	<div class="card-body">
+		<strong class="card-title">如果你喜欢并且热爱围棋，请加入我们，打造一个最强的免费，开源围棋软件！</strong>
+	</div>
+	<img class="card-img-bottom" src="	https://leela-1256531131.cos.ap-shanghai.myqcloud.com/Backgound/background02.png" alt="背景图片">
+</div>
+<h2 class="pb-3 mb-4 border-bottom">leelazero介绍</h2>
+<p>这一次与时俱进的成果，就是Leela Zero</p>
+<p>
+Leela Zero是AlphaGo Zero论文Mastering the Game of Go without Human Knowledge的实现，据gcp在GitHub上介绍，这个实现非常忠于原文，目标就是搞一个开源的AlphaGo Zero。<br>
+作为AlphaGo Zero的忠实实现，Leela Zero使用了蒙特卡洛树搜索（MCTS）和深度残差卷积神经网络堆栈，不需要输入人类棋谱，可以在自我对弈中提升。<br>
+但是，Leela Zero和真正的AlphaGo Zero还差一个很重要的东西：网络权重。<br>
+gcp在Leela Zero的GitHub说明中称，这份实现中不包含网络权重，如果能搞到AlphaGo Zero的权重，这个程序能和真的狗一样强。<br>
+但问题在于，他算了一下，如果要在普通消费级硬件上重新计算一遍AlphaGo Zero的权重，也就是让Leela Zero进化到AlphaGo Zero退隐时候的水平，需要1700年。<br>
+这个普通消费级硬件，指的是一块英伟达GTX 1080 Ti。<br>
+所以，Leela Zero现在应该算是个没有灵魂的躯壳，等着来自大规模GPU的计算力赋予它真正的生命。gcp把这个算法实现出来之后，就开始到处发帖征集志愿者来一起贡献GPU算力训练它。<br>
+</p>
+<p>所以，如果你喜欢并且热爱围棋，请加入我们，打造一个最强的免费，开源围棋软件！</p>
+<hr class="featurette-divider">
+<div class="row featurette mb-4">
+	<div class="col-md-7">
+		<h2 class="pb-3 mb-4 featurette-headding border-bottom">Leela作者介绍</h2>
+		<p class="lead">这位比利时程序员小哥，研究用计算机下棋已经不是一年两年了。早在上个世纪，他就开始在Adrien Regimbald的开源象棋引擎Faile基础上开发自己的国际象棋软件了。<br>
+		他所开发的国际象棋软件名叫Sjeng，苹果Mac电脑自带的国际象棋软件，所用的计算引擎就是开源版Sjeng。2003年，这位小哥还开发了一个商业版的Deep Sjeng。<br>
+		Sjeng赢得过2008年世界快速计算机国际象棋锦标赛冠军、2009年世界计算机国际象棋锦标赛冠军，以及2010和2011年的网络计算机国际象棋锦标赛。<br>
+		他所开发的围棋软件Leela也可以说是很厉害了，2008年，Leela获得了Computer Olympiad（计算机奥林匹克）19×19围棋比赛的第三名和9×9围棋的第二名。<br>
+		2017年2月，他与时俱进地发布了新版Leela，在其中用上了深度学习技术。今年8月，这个围棋软件在首届世界智能围棋公开赛中排名第8，排在它前边的，有中国大陆的绝艺、天壤，台北的CGI，日本的DeepZenGo、Rayn、AQ和韩国的石子旋风。<br>
+		</p>
+	</div>
+	<div class="col-md-5">
+		<img class="featurette-image img-fluid mx-auto" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/gcpPicture/gcpIntroduction.jpg" alt="gcp picture">
+	</div>
+</div>
 </main>
 <footer class="blog-footer">
 	<p>
