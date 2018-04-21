@@ -16,7 +16,7 @@
 <header class="blog-header py-3">
 	<h1 class="text-dark text-center">Leela中文网站</h1>
 </header>
-<div class="nav-scroller py-1 mb-2 border-bottom">
+<div class="nav-scroller py-1 mb-4 border-bottom">
 	<nav class="nav d-flex justify-content-between">
 		<a class="p-2 text-muted" href="index">Leela介绍</a>
 		<a class="p-2 text-muted" href="news">最新动态</a>
@@ -27,8 +27,33 @@
 	</nav>
 </div>
 </div>
-<main>
-<h2>playgo</h2>
+<main class="container">
+	<h2 class="border-bottom">使用sabaki引擎加载leela</h2>
+	<h3>1.下载sabaki</h3>
+	<a class="btn btn-primary" href="https://github.com/SabakiHQ/Sabaki/releases" role="button" target="_blank">前往github下载</a>
+	<p>请选择相应的版本下载<br>
+	64位电脑选择第6个下载，32位电脑选择第5个下载。
+	</p>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/playgo/palygo_sabaki01.gif">
+	<h3>2.安装sabaki</h3>
+	<p>点击下载到的文件安装。安装完成后桌面会出现sabaki快捷方式。</p>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/playgo/palygo_sabaki02.gif">
+	<h3>3.打开sabaki控制台console</h3>
+	<p>点击打开控制台，如果菜单栏不显示请按<kbd>Alt</kbd>键显示</p>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/playgo/palygo_sabaki03.gif">
+	<h3>4.在引擎中添加leela</h3>
+	<p>点击添加leela。只需添加一个即可！</p>
+	<ul>
+		<li>第一行填名字，这里我取名leela就可以了。内容可以随便填，你自己能认出来就行了</li>
+		<li>第二行点击“文件夹”小图标，找到并选择leelaz程序。注意要选择leelaz而不是autogtp，否则后面会出错！</li>
+		<li>第三行输入leela运行指令<br><code>-g --noponder -w networks/请替换中文为权重名字</code><br>注意有空格</li>
+		<li>第四行输入时间控制命令。<br><code>time_settings 0 15 1</code><br>注意有空格</li>
+	</ul>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/playgo/palygo_sabaki04.gif">
+	<h3>5.新建对局</h3>
+	<p>点击新建对局，然后根据需要选择黑白双方棋手，不选默认为“人类”。双方都选leela则为leela左右互搏。</p>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/playgo/palygo_sabaki05.gif">
+	
 </main>
 <footer class="blog-footer">
 	<p>
