@@ -150,3 +150,6 @@ news-excerpt{
 }
 /* training tech image
 ------------------------- */
+.tech-img{
+	width: 100%;
+}

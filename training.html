@@ -58,8 +58,65 @@
 	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/training/training06.gif ">
 	<p>对弈完成后，程序会自动上传棋谱，上传成功才是一次有效的对局，而后程序会自动进行下一盘自对弈。</p>
 	<p>整个过程都是全自动的，不需要人来操作。一盘对局大概10~20分钟不等，你可以放着不管，忙其他事吧！</p>
-	
+	<!--分割线-->
 	<h2 class="border-bottom" id="google-training">用谷歌免费colab在线训练</h2>
+	<h3>1.前往谷歌colab</h3>
+	<a class="btn btn-primary" href="https://colab.research.google.com/" role="button" target="_blank">前往谷歌colab</a>
+	<p>新建python3笔记本</p>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/training/training07.gif ">
+	<h3>2.复制代码并设置硬件加速</h3>
+	<ol>
+		<li>复制下面的代码到笔记本里</li>
+		<li>保存代码</li>
+		<li>设置硬件加速，设置成功后才能免费使用GPU</li>
+	</ol>
+	<pre><code>
+	
+import sys
+import os
+import subprocess
+
+stdout_backup = sys.stdout
+with open('run', 'w') as run_file:
+  sys.stdout = run_file
+  print( '''
+#!/usr/bin/env bash
+
+if ( [ ! -f "run_lz_in_gg/leelaz" ] || [ ! -f "run_lz_in_gg/autogtp" ] ); then
+  git clone https://github.com/liujn2018/run_lz_in_gg.git
+  apt install qt5-default curl
+  apt install libboost-dev libboost-program-options-dev libopenblas-dev opencl-headers ocl-icd-opencl-dev
+  apt -qq install --no-install-recommends nvidia-opencl-icd-384 nvidia-opencl-dev
+fi
+
+cd run_lz_in_gg && ./autogtp -k sgf
+''')
+sys.stdout = stdout_backup
+print(os.popen('chmod +x run').read())
+
+process = subprocess.Popen(['./run'],stdout=subprocess.PIPE,shell=True,bufsize=0)
+
+MAX_LINE_LENGTH = 120
+CURRENT_LINE_LENGTH = 0
+while(True):
+  for ch in process.stdout.read(1):
+    print(chr(ch), end='')
+    if ch == ord('\n'):
+      CURRENT_LINE_LENGTH = 0
+    else:
+      CURRENT_LINE_LENGTH += 1
+      if (CURRENT_LINE_LENGTH >= MAX_LINE_LENGTH):
+        print('\n', end='')
+        CURRENT_LINE_LENGTH = 0
+print('')
+
+	</code></pre>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/training/training010.gif ">
+	<h3>3.运行程序及中断</h3>
+	<p>点击三角符号即可运行程序。程序是全自动的，不需要额外操作。</p>
+	<p>通过点击中断程序可以停止运行</p>
+	<p>程序运行期间，请勿关闭浏览器，并保持网络连接顺畅。正常情况下运行12小时后，谷歌会强制中断程序，再次点击运行即可</p>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/training/training09.gif ">
 </main>
 <footer class="blog-footer">
 	<p>
