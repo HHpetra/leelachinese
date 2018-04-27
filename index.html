@@ -30,20 +30,34 @@
 <main class="container">
 <div class="card mb-4">
 	<div class="card-body">
-		<strong class="card-title">如果你喜欢并且热爱围棋，请加入我们，打造一个最强的免费，开源围棋软件！</strong>
+		<strong class="card-title">其作始也简，其将毕也必巨--庄子·人间世</strong>
 	</div>
 	<img class="card-img-bottom" src="src/image/background02.png" alt="背景图片">
 </div>
 <h2 class="pb-3 mb-4 border-bottom">leelazero介绍</h2>
-<p>Leela-zero是leela的全新版本。不依靠任何人类棋谱知识，采用蒙特卡洛树搜索和深度残差神经网络。换句话说Leela-zero是基于AlphaGo-zero打造的一款围棋软件。<br>
-正如AlphaGo-zero论文中系统阐述的那样“不师从人类，独自悟透围棋之道。”AlphaGo-zero是那么的遥不可及，自从乌镇围棋比赛后就退隐江湖，仅仅留下百来篇的围棋天书。并不能造福广大围棋爱好者，Leela-zero的出现人手一个AlphaGo-zero成为了可能<br>
-leela-zero是开源的软件，其成果是全人类共享，任何人都可以免费使用。
+<p>leela-zero和AlphaGo-zero一样，是使用蒙特卡洛树搜索和深度残差神经网络算法，不依赖于任何人类棋谱训练出来的围棋AI。leela-zero是AlphaGo-zero忠实的追随者。<br>
+和绝艺不一样的，leela-zero是开源免费的项目，其成果是全人类共享的。目前绝艺只提供给国家队使用，而leela-zero任何人都可以免费使用。<br>
+Zero顾名思义，就是从零开始。leela-zero需要从零开始学习围棋，通过自对弈产生棋谱训练自己，逐步成长为围棋高手。据估计，在普通的硬件设备上重新打造一个AlphaGo-zero需要1700年。
 </p>
-<h3>其作始也简，其将毕也必巨</h3>
-<p>leela-zero需要从头零开始学习围棋，这是一个很漫长的过程。据估计如果使用普通的硬件训练，需要长达1700年的时间才能完成。<br>
-众人拾柴火焰高，因此leela-zero的作者采用了分布式的训练方法，即leela志愿者们用自己的电脑一起帮助训练leela。九层之台,起于垒土;合抱之木,生于毫末。每天世界各地数以千计的leela志愿者们上传了棋谱。每多贡献一份棋谱，leela就能多进步一点点。
+<h3>1700年太久，我现在就想要！</h3>
+<p>众人拾柴火焰高，因此leela-zero采用分布式的训练方式。世界各地的leela爱好者们可以贡献自己的电脑参与训练。其过程可概括为以下几步：</p>
+<ul>
+	<li>leela志愿者者下载leela-zero训练程序autogtp</li>
+	<li>志愿者们分别运行训练程序，训练程序会自动让leela-zero自对弈，产生棋谱后上传服务器。</li>
+	<li>作者用收集到的棋谱训练出神经网络权重（权重：表征神经网络内部联系的一系列参数）</li>
+	<li>新出来的权重会和之前最强的权重对局，用于检验其棋力，400局中胜率超过55%的则更新为当前最强权重。</li>
+</ul>
+<p>leela-zero的进步就是靠产生一个又一个更强的权重。</p>
+<img src="src/image/elo.png" rel="leela-zero Elo 评分散点图">
+<p>目前每天有600人左右在为leela-zero提供训练。在半年的时间内leela-zero已经自我对弈700万局，经历128次权重更迭。详细信息前往http://zero.sjeng.org/查看。一次权重更迭就代表leela-zero
+的一次进步。虽然每个人的力量很弱小，但我们团结在一起的力量是无比巨大的。Leela-zero从牙牙学语，到如今具备职业棋手水平，参与训练的志愿者们功不可没！
 </p>
-<p>所以，如果你喜欢并且热爱围棋，请加入我们，打造一个最强的免费，开源围棋软件！</p>
+<h3>我要训练leela-zero</h3>
+<p>加入训练是让leela-zero变强的唯一途径,如果你想让leela-zero更快变强，请加入到训练的队伍中。Leela-zero今后的发展，就拜托各位啦！</p>
+<h3>我要用leela-zero下棋</h3>
+<p>leela-zero还处于成长阶段，目前作者的主要精力放在提高leela-zero棋力上，因此leela-zero没有像Zen那样的图形界面。但是值得庆幸的是这是个开源项目，有leela-zero爱好者为leela量身定做了图形界面的lizzie用于分析局面。此外，github上还有其他基于GTP协议开发的独立图形界面程序，可以用于加载leela，例如sabaki和GoGui。<br>
+请各位leela-zero爱好者不要着急，虽然目前要使用leela-zero下棋还很麻烦，但是lizzie每天都在频繁的更新中，功能会越来越多，界面会对电脑盲越来越友好。甚至，以后还会有手机上可以运行leela-zero的APP出现，耐心等待就是了。
+</p>
 <hr class="featurette-divider">
 <div class="row featurette mb-4">
 	<div class="col-md-7">
