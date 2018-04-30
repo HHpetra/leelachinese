@@ -32,7 +32,7 @@
 <div class="col-md-8">
 	<div class="alert alert-primary">
 		<p>leela-zero还处于成长阶段，目前作者的主要精力放在提高leela-zero棋力上，因此leela-zero没有像Zen那样的图形界面。但是值得庆幸的是这是个开源项目，有leela-zero爱好者为leela量身定做了图形界面的lizzie用于分析局面。此外，github上还有其他基于GTP协议开发的独立图形界面程序，可以用于加载leela，例如sabaki和GoGui。下面介绍sabaki使用教程。</p>
-		<strong>请参与训练后再使用leela对弈，否则下面的教程看不懂不要怪我！</strong>
+		<strong>请运行训练程序autogtp.exe后再使用sabaki对弈，否则下面的教程看不懂不要怪我！</strong>
 	</div>
 	<h2 class="border-bottom">使用sabaki引擎加载leela-zero</h2>
 	<a class="btn btn-primary" href="https://www.bilibili.com/video/av22229212" role="button" target="_blank">视频教程</a>
@@ -49,6 +49,7 @@
 	<p>点击打开控制台，如果菜单栏不显示请按<kbd>Alt</kbd>键显示</p>
 	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/playgo/palygo_sabaki03.gif">
 	<h3>4.在引擎中添加leela</h3>
+	<div class="alert alert-danger"><strong>请运行训练程序autogtp.exe后再使用sabaki对弈，否则下面的教程看不懂不要怪我！</strong></div>
 	<p>点击添加leela。只需添加一个即可！</p>
 	<ul>
 		<li>第一行填名字，这里我取名leela就可以了。内容可以随便填，你自己能认出来就行了</li>
@@ -56,9 +57,11 @@
 		<li>第三行输入leela运行指令<br><code>-g --noponder -w networks/请替换中文为权重名字</code><br>注意有空格</li>
 		<li>第四行输入时间控制命令。<br><code>time_settings 0 15 1</code><br>注意有空格</li>
 	</ul>
+	<div class="alert alert-primary">
 	<p>补充解释一下 -w 参数。-w 需要指明权重文件（包括权重名字和路径）。一般权重文件放在networks文件夹里 ，所以写networks/。
-	接下来是权重名字，权重文件可以随便起名字，但是一定要和你填的参数对应，包括扩展名（比如.txt后缀）比如权重名字叫honghonglielieV12（没有后缀）放在networks文件夹里，那么参数就应该填<code>-g --noponder -w networks/honghonglielieV12</code><br>
-	再比如，权重名字叫0c0.txt放在和leelaz.exe同一目录下（同一文件夹里），那么参数就应该填<code>-g --noponder -w 0c0.txt</code></p>
+	接下来是权重名字，权重文件可以随便起名字，但是一定要和你填的参数对应，包括扩展名（比如.txt后缀）比如权重名字叫honghonglielieV12（没有后缀）放在networks文件夹里，那么参数就应该填<br><code>-g --noponder -w networks/honghonglielieV12</code><br>
+	再比如，权重名字叫0c0.txt放在和leelaz.exe同一目录下（同一文件夹里），那么参数就应该填<br><code>-g --noponder -w 0c0.txt</code></p>
+	</div>
 	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/playgo/palygo_sabaki04.gif">
 	<h3>5.新建对局</h3>
 	<p>点击新建对局，然后根据需要选择黑白双方棋手，不选默认为“人类”。双方都选leela则为leela左右互搏。</p>
