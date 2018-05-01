@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="cn">
+<header>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="发布Leela-zero相关消息">
+	<meta name="author" content="韦钧培">
+	<link rel="icon" href="http://getbootstrap.com/favion.ico">
+	<title>Leela-zero中文网站</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900">
+	<link rel="stylesheet" href="styles/BlogStyle.css">
+</header>
+<body>
+<div class="container">
+<header class="blog-header py-3">
+	<h1 class="text-dark text-center">Leela-zero中文网站</h1>
+</header>
+<div class="nav-scroller py-1 mb-2 border-bottom">
+	<nav class="nav d-flex justify-content-between">
+		<a class="p-2 text-muted" href="index.html">Leela-zero介绍</a>
+		<a class="p-2 text-muted" href="news.html">最新动态</a>
+		<a class="p-2 text-muted" href="#">训练程序</a>
+		<a class="p-2 text-muted" href="playgo.html">对弈软件</a>
+		<a class="p-2 text-muted" href="lizzie.html">局面分析</a>
+		<a class="p-2 text-muted" href="http://zero.sjeng.org/" target="_blank">英文官网</a>
+	</nav>
+</div>
+</div>
+<main class="container">
+<div class="row">
+<div class="col-md-8">
+	<h2 class="border-bottom">leela-zero训练方法</h2>
+	<p>leela-zero的训练方式有两种</p>
+	<ul>
+		<li><a href="#normal-training">用个人电脑下载程序训练</a>：需要配置比较好的显卡</li>
+		<li><a href="#google-training">用谷歌免费colab在线训练</a>：需要自行科学上网，并准备好谷歌账号</li>
+	</ul>
+	<h2 class="border-bottom" id="normal-training">用个人电脑下载程序训练</h2>
+	<a class="btn btn-primary" href="https://www.bilibili.com/video/av22229212" role="button" target="_blank">视频教程</a>
+	<h3>1.下载训练程序</h3>
+	<a class="btn btn-primary" href="https://github.com/gcp/leela-zero/releases" role="button" target="_blank">前往github下载</a>
+	<p>前往github的leela-zero项目下载训练程序<p>
+	<p>请选择相应的版本下载<br>
+	64位电脑选择第4个下载，32位电脑选择第3个下载。
+	</p>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/training/training01.gif ">
+	<h3>2.解压文件</h3>
+	<p>右键点击压缩包解压文件。</p>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/training/training02.gif ">
+	<h3>3.运行训练程序</h3>
+	<p>双击autogtp运行训练程序。</p>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/training/training03.gif ">
+	<p>程序会自动下载最新权重文件进行自对弈。若长时间卡住不动，说明因网络问题连接服务器失败。这时候就需要到QQ群里手动下载权重文件(QQ群号726658329)</p>
+	<p>下载后放在networks文件夹里。解压。把解压出来的文件改名，改成和压缩包一样的名字，并把后缀删掉。</p>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/training/training04.gif ">
+	<h3>程序运行中</h3>
+	<p>第一次运行程序，程序会针对GPU进行优化，如下图所示</p>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/training/training05.gif ">
+	<p>稍等片刻后程序就会进行自对弈状态，也就是我们常说的跑谱，如下图所示</p>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/training/training06.gif ">
+	<p>对弈完成后，程序会自动上传棋谱，上传成功才是一次有效的对局，而后程序会自动进行下一盘自对弈。</p>
+	<p>整个过程都是全自动的，不需要人来操作。一盘对局大概10~20分钟不等，你可以放着不管，忙其他事吧！</p>
+	<!--分割线-->
+	<h2 class="border-bottom" id="google-training">用谷歌免费colab在线训练</h2>
+	<h3>1.前往谷歌colab</h3>
+	<a class="btn btn-primary" href="https://colab.research.google.com/" role="button" target="_blank">前往谷歌colab</a>
+	<p>新建python3笔记本</p>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/training/training07.gif ">
+	<h3>2.复制代码并设置硬件加速</h3>
+	<ol>
+		<li>复制下面的代码到笔记本里</li>
+		<li>保存代码</li>
+		<li>设置硬件加速，设置成功后才能免费使用GPU</li>
+	</ol>
+	<pre><code>
+	
+import sys
+import os
+import subprocess
+
+stdout_backup = sys.stdout
+with open('run', 'w') as run_file:
+  sys.stdout = run_file
+  print( '''
+#!/usr/bin/env bash
+
+if ( [ ! -f "run_lz_in_gg/leelaz" ] || [ ! -f "run_lz_in_gg/autogtp" ] ); then
+  git clone https://github.com/liujn2018/run_lz_in_gg.git
+  apt install qt5-default curl
+  apt install libboost-dev libboost-program-options-dev libopenblas-dev opencl-headers ocl-icd-opencl-dev
+  apt -qq install --no-install-recommends nvidia-opencl-icd-384 nvidia-opencl-dev
+fi
+
+cd run_lz_in_gg && ./autogtp -k sgf
+''')
+sys.stdout = stdout_backup
+print(os.popen('chmod +x run').read())
+
+process = subprocess.Popen(['./run'],stdout=subprocess.PIPE,shell=True,bufsize=0)
+
+MAX_LINE_LENGTH = 120
+CURRENT_LINE_LENGTH = 0
+while(True):
+  for ch in process.stdout.read(1):
+    print(chr(ch), end='')
+    if ch == ord('\n'):
+      CURRENT_LINE_LENGTH = 0
+    else:
+      CURRENT_LINE_LENGTH += 1
+      if (CURRENT_LINE_LENGTH >= MAX_LINE_LENGTH):
+        print('\n', end='')
+        CURRENT_LINE_LENGTH = 0
+print('')
+
+	</code></pre>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/training/training010.gif ">
+	<h3>3.运行程序及中断</h3>
+	<p>点击三角符号即可运行程序。程序是全自动的，不需要额外操作。</p>
+	<p>通过点击中断程序可以停止运行</p>
+	<p>程序运行期间，请勿关闭浏览器，并保持网络连接顺畅。正常情况下运行12小时后，谷歌会强制中断程序，再次点击运行即可</p>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/training/training09.gif ">
+</div>
+<aside class="col-md-4">
+	<img class="my-4 tech-img" src="src/image/qqgroup01.jpg">
+	<img class="my-4 tech-img" src="src/image/qqgroup02.jpg">
+</aside>
+</div>
+</main>
+<footer class="blog-footer">
+	<p>
+	website built for <a href="https://github.com/gcp/leela-zero">Leela</a>
+	by
+	@韦钧培
+	.
+	</p>
+	<p><a href="#">返回顶部</a></p>
+</footer>
+</body>
+
+</html>
