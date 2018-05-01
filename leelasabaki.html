@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="cn">
+<header>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="发布Leela-zero相关消息">
+	<meta name="author" content="韦钧培">
+	<link rel="icon" href="http://getbootstrap.com/favion.ico">
+	<title>Leela-zero中文网站</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900">
+	<link rel="stylesheet" href="styles/BlogStyle.css">
+</header>
+<body>
+<div class="container">
+<header class="blog-header py-3">
+	<h1 class="text-dark text-center">Leela-zero中文网站</h1>
+</header>
+<div class="nav-scroller py-1 mb-2 border-bottom">
+	<nav class="nav d-flex justify-content-between">
+		<a class="p-2 text-muted" href="index">Leela-zero介绍</a>
+		<a class="p-2 text-muted" href="news">最新动态</a>
+		<a class="p-2 text-muted" href="training">训练程序</a>
+		<a class="p-2 text-muted" href="playgo">对弈软件</a>
+		<a class="p-2 text-muted" href="#">概论热图</a>
+		<a class="p-2 text-muted" href="lizzie">局面分析</a>
+		<a class="p-2 text-muted" href="http://zero.sjeng.org/" target="_blank">英文官网</a>
+	</nav>
+</div>
+</div>
+<main class="container">
+<div class="row">
+<div class="col-md-8">
+	<h2 class="border-bottom">整合Leela zero与Sabaki</h2>
+	LeelaSabaki整合了Leela zero与Sabaki，实现了两个有趣的功能：
+	<ul>
+		<li>显示网络热图。</li>
+		<li>显示游戏树。</li>
+	</ul>
+	<h3>1.下载LeelaSabaki</h3>
+	<a class="btn btn-primary" href="https://github.com/SabakiHQ/LeelaSabaki/releases" role="button" target="_blank">前往github下载</a>
+	<p>点击下载LeelaSabaki</p>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/leelasabaki/LeelaSabaki_01.gif">
+	<h3>2.解压文件</h3>
+	<p>右击解压LeelaSabaki</p>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/leelasabaki/LeelaSabaki_02.gif">
+	<h3>3.将原networks目录下的权重文件复制或截切到LeelaSabaki目录下</h3>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/leelasabaki/LeelaSabaki_03.gif">
+	<div class="alert alert-primary">
+	在此处，权重文件被重命名为weights.txt
+	</div>
+	<h3>4.加载LeelaSabaki与Leela zero</h3>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/leelasabaki/LeelaSabaki_04.gif">
+	<p>添加 LeelaSabaki 只需添加一个即可！一个！！</p>
+	<ul>
+		<li>第一行填名字，这里我取名LeelaSabaki。内容可以随便填，你自己能认出来就行了</li>
+		<li>第二行点击“文件夹”小图标，找到并选择<code>leelasabaki-win.exe</code>。注意要选择<code>leelasabaki-win.exe</code>而不是<code>leelaz.exe</code></li>
+		<li>第三行输入LeelaSabaki和leela运行指令<br><code>--flat --heatmap $HOME\leelaz.exe --noponder -t 4 -w weights.txt</code></li>
+		<li>第四行输入时间控制命令。<br><code>time_settings 0 10 1</code></li>
+	</ul>
+	<div class="alert alert-primary">
+	<code>--flat</code> 参数。--flat 显示游戏树。<br>
+	<code>--heatmap</code> 参数。--heatmap 显示网络概论热图。<br>
+	<code>$HOME\leelaz.exe</code> 参数。$HOME\leelaz.exe 表示leelaz.exe的绝对路径。此处一定要写全leelaz.exe的绝对路径。<br>
+	<code>-t 4</code> 参数。-t 4表示4个线程。<br>
+	<code>-w</code> 参数。-w 指明权重文件（包括权重名字和路径）。此处加载LeelaSabaki，权重文件一定要在LeelaSabaki目录下。<br>
+	</div>
+	<h3>5.新建对局</h3>
+	<p>点击新建对局，然后根据需要选择黑白双方棋手，不选默认为“人类”。双方都选LeelaSabaki则为leela zero左右互搏。</p>
+	<h2>显示左侧区域</h2>
+	<ul>
+		<li>View --> Show Game Tree</li>
+	</ul>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/leelasabaki/LeelaSabaki_05.gif">
+	<h2>显示右侧区域</h2>
+	<ul>
+		<li>Engines --> Toggle GTP Console</li>
+	</ul>
+	<img class="tech-img" src="https://leela-1256531131.cos.ap-shanghai.myqcloud.com/leelasabaki/LeelaSabaki_06.gif">
+	<div class="alert alert-primary">
+	--flat 参数与--heatmap 参数完整显示效果。
+	</div>
+</div>
+<aside class="col-md-4">
+	<img class="my-4 tech-img" src="src/image/qqgroup01.jpg">
+	<img class="my-4 tech-img" src="src/image/qqgroup03.jpg">
+</aside>
+</div>
+</main>
+<footer class="blog-footer">
+	<p>
+	website built for <a href="https://github.com/gcp/leela-zero">Leela</a>
+	by
+	@韦钧培
+	.
+	</p>
+	<p><a href="#">返回顶部</a></p>
+</footer>
+</body>
+
+</html>
