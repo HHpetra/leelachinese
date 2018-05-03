@@ -1,16 +1,21 @@
-def CONTAINER_NAME="jenkins-pipeline"
-def CONTAINER_TAG="latest"
-def DOCKER_HUB_USER="hakdogan"
-def HTTP_PORT="8090"
+pipeline {
+    agent any
 
-node {
-
-    stage('Checkout') {
-        checkout scm
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
-
-    stage('Build'){
-        echo "构建"
-    }
-
-   }
+}
