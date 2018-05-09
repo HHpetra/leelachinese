@@ -3,7 +3,7 @@
 
     checkout scm
 
-        docker.withRegistry('https://registry.lunbanresearch.com', 'credentials-id') {
+        docker.withRegistry('https://registry.lunbanresearch.com') {
 
             def customImage = docker.build("leelachinese:${env.BUILD_ID}")
 
