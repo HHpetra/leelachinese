@@ -1,22 +1,12 @@
-pipeline {
-    agent any
 
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-                sh 'docker ps'
-            }
+    node{
+
+    checkout scm
+
+        docker.withRegistry('https://registry.lunbanresearch.com', 'credentials-id') {
+
+            def customImage = docker.build("leelachinese:${env.BUILD_ID}")
+
+            customImage.push()
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
-    }
-}
+     }
