@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700');
+
+/**
+ * Layout
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+        display: block;
+        padding: 4em 0 1px;
+        text-align: center;
+    }
+    header h1, header h2 {
+        font-weight: lighter;
+    }
+    header h1 {
+        letter-spacing: -2px;
+        font-size: 3.2em;
+        text-shadow: 0 1px 0 white;
+    }
+    header h2 {
+        font-size: 1.5em;
+        letter-spacing: -1px;
+        opacity: .7;
+    }
+    header h1 img {
+        margin-bottom: 9px;
+        vertical-align: middle;
+    }
+    header a {
+        margin-bottom: 3em;
+}
+
+#screenshot {
+        position: relative;
+        margin: 4em 0;
+        background: url('../image/mylizzie/stripe.jpg') center no-repeat;
+    }
+    #screenshot img {
+        max-width: 100%;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, .5);
+}

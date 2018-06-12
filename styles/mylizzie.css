@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: block;
+    padding: 4rem 0 1px;
+    text-align: center;
+    background-color: #E3D9CF;
+}
+header h1{
+    letter-spacing: -2px;
+    font-size: 3.2em;
+    text-shadow: 0 1px 0 white;
+}
+header h1,header h2{
+    font-weight: lighter;
+}
+header h2{
+    font-size: 1.5em;
+    letter-spacing: -1px;
+    opacity: .7;
+}
+.screenshot{
+    position: relative;
+    margin: 4em 0;
+    background: url("../image/mylizzie/stripe.jpg") center no-repeat;
+}
+.screenshot img{
+    max-width: 80%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .5);
+}
+img{
+    vertical-align: middle;
+}
+header a{
+    margin-bottom: 3em;
+    display: inline-block;
+    border: 3px solid #26292C;
+    padding: 5px 30px;
+    letter-spacing: -1px;
+    text-decoration: none;
+}
+.inner{
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 980px;
+}
+.introduction{
+    background-color: #F4EADF;
+    padding: 3em 3em;
+}
+h3{
+    margin: 0.5em 0 1em 0;
+    color: black;
+    font-size: 1.4em;
+    font-weight: lighter;
+}
+.analysis{
+    background-color: #C4BD64;
+    padding:3em;
+}
+.analysis .inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+.analysis .inner img{
+    box-sizing: border-box;
+    width: 100%;
+}
+.analysis .inner div{
+    flex: 50%;
+    margin: 1em auto;
+}
