@@ -19,7 +19,7 @@
             "type": "chrome",
             "request": "launch",
             "sourceMaps": false,
-            "file": "${workspaceRoot}/tutorials/lizzie.html"
+            "file": "${workspaceRoot}/index.html"
         }
     ]
 }
