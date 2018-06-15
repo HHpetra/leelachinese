@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+	<head lang="zh-CN">
+		<meta charset="utf-8">
+		<meta name="author" content="韦钧培">
+		<meta name="description" content="leela中文网 为中国的leela爱好者们专门制作的中文网站，用于宣传leela-zero项目。通过本网站可以下载使用leela、参与训练leela和了解leela相关知识。">
+		<link rel="stylesheet" href="../styles/tutorial.css">
+	</head>
+	<body>
+        <header>
+            <div class="inner">
+                <h1>leela使用指南</h1>
+            </div>
+        </header>
+		<main class="inner">
+            <nav>
+                <ul>
+                    <li>
+                        <p>基本电脑操作</p>
+                        <ul>
+                            <li><a href="fileoperation64.html">文件基本操作win10</a></li>
+                            <li><a href="computconfiguration.html">电脑配置相关win10</a></li>
+                            <li><a>文件基本操作win7</a></li>
+                            <li><a>电脑配置相关win7</a></li>
+                            <li><a href="download.html">下载相关软件</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>常用软件</p>
+                        <ul>
+                            <li><a href="autogtp.html">自动训练程序</a></li>
+                            <li><a href="lizzie.html">lizzie</a></li>
+                            <li><a href="https://wei7.com/" target="_blank">wei7.com</a></li>
+                            <li><a href="sabaki.html">sabaki</a></li>
+                            <li><a href="gogui.html">GoGui</a></li>
+                            <li><a>手机app</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>进阶设置</p>
+                        <ul>
+                            <li><a>leela参数讲解</a></li>
+                            <li><a>谷歌免费GPU使用</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>常见错误</p>
+                        <ul>
+                            <li>错误解决方法</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+                <section>
+                    <h2>leela-zero参数及解释</h2>
+                    <div class="step">
+                        <table>
+                            <tr>
+                                <td>Generic options:</td>
+                            </tr>
+                            <tr>
+                                <td>-h [ --help ]</td>
+                                <td>查看帮助</td>
+                            </tr>
+                            <tr>
+                                <td>-g [ --gtp ]</td>
+                                <td>打开GTP模式</td>
+                            </tr>
+                            <tr>
+                                <td>-t [ --threads ] arg (=2)</td>
+                                <td>thread使用数量，默认2</td>
+                            </tr>
+                            <tr>
+                                <td>-p [ --playouts ] arg </td>
+                                <td>需要先使用--noponder才能使用。限制每步棋的playout数量</td>
+                            </tr>
+                            <tr>
+                                <td>-v [ --visits ] arg</td>
+                                <td>限制每步棋的visits数量</td>
+                            </tr>
+                            <tr>
+                                <td>-b [ --lagbuffer ] arg (=100)</td>
+                                <td>Safety margin for time usage in centiseconds.</td>
+                            </tr>
+                            <tr>
+                                <td>-r [ --resignpct ] arg (=-1)</td>
+                                <td>低于多少胜率时投降，-1代表10%</td>
+                            </tr>
+                            <tr>
+                                <td>-w [ --weights ] arg</td>
+                                <td>要使用的权重文件</td>
+                            </tr>
+                            <tr>
+                                <td>-l [ --logfile ] arg</td>
+                                <td>log日志</td>
+                            </tr>
+                            <tr>
+                                <td>-q [ --quiet ]</td>
+                                <td>退出</td>
+                            </tr>
+                            <tr>
+                                <td>--timemanage arg (=auto)</td>
+                                <td>[auto|on|off|fast] Enable time managementfeatures.auto = off when using -m, otherwise on</td>
+                            </tr>
+                            <tr>
+                                <td>--noponder</td>
+                                <td>在对手手下棋时停止思考</td>
+                            </tr>
+                            <tr>
+                                <td>--benchmark </td>
+                                <td>Test network and exit. Default args:-v3200 --noponder -m0 -t1 -s1.</td>
+                            </tr>
+                            <tr>
+                                <td>GPU options:</td>
+                            </tr>
+                            <tr>
+                                <td>--gpu arg</td>
+                                <td>ID of the OpenCL device(s) to use (disablesautodetection).</td>
+                            </tr>
+                            <tr>
+                                <td>--full-tuner </td>
+                                <td>Try harder to find an optimal OpenCL tuning.</td>
+                            </tr>
+                            <tr>
+                                <td>--tune-only </td>
+                                <td>Tune OpenCL only and then exit.</td>
+                            </tr>
+                            <tr>
+                                <td>Self-play options:</td>
+                            </tr>
+                            <tr>
+                                <td>-n [ --noise ]</td>
+                                <td>使用策略网络随机化</td>
+                            </tr>
+                            <tr>
+                                <td>-s [ --seed ] arg</td>
+                                <td>随机数种子</td>
+                            </tr>
+                            <tr>
+                                <td>-d [ --dumbpass ]</td>
+                                <td>Don't use heuristics for smarter passing.</td>
+                            </tr>
+                            <tr>
+                                <td>-m [ --randomcnt ] arg (=0)</td>
+                                <td>前X步更加随机，开局多样化</td>
+                            </tr>
+                            <tr>
+                                <td>--randomvisits arg (=1)</td>
+                                <td>在xvisits前不使用随机步</td>
+                            </tr>
+                            <tr>
+                                <td>--randomtemp arg (=1)</td>
+                                <td>Temperature to use for random move selection.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+        </main>
+		<footer>
+            <div class="inner">
+                    <p>
+                        website built for <a href="https://github.com/gcp/leela-zero" target="_blank">Leela</a> tutorials 
+                        by@韦钧培.
+                        </p>
+                    <p><a href="#">返回顶部</a></p>
+                </div>
+        </footer>
+	</body>
+</html>
