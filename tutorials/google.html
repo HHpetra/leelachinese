@@ -13,90 +13,90 @@
             </div>
         </header>
 		<main class="inner">
-                <nav>
-                    <ul>
-                        <li>
-                            <p>基本电脑操作</p>
-                            <ul>
-                                <li><a href="#">文件基本操作win10</a></li>
-                                <li><a>电脑配置相关win10</a></li>
-                                <li><a>文件基本操作win7</a></li>
-                                <li><a>电脑配置相关win7</a></li>
-                                <li><a>下载相关软件</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p>常用软件</p>
-                            <ul>
-                                <li><a>自动训练程序</a></li>
-                                <li><a>lizzie</a></li>
-                                <li><a>wei7.com</a></li>
-                                <li><a>sabaki</a></li>
-                                <li><a>GoGui</a></li>
-                                <li><a>手机app</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p>进阶设置</p>
-                            <ul>
-                                <li><a>leela参数讲解</a></li>
-                                <li><a>谷歌免费GPU使用</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p>常见错误</p>
-                            <ul>
-                                <li>错误解决方法</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <section>
-                    <h2>谷歌免费GPU使用教程</h2>
-                    <div class="step">
-                        <h3>准备:</h3>
+            <nav>
+                <ul>
+                    <li>
+                        <p>基本电脑操作</p>
                         <ul>
-                            <li>科学上网（这个我没办法教大家，请自行解决）</li>
-                            <li>注册谷歌账号（注册不了就去淘宝购买）</li>
-                            <li>前往google colab，若无法访问请科学上网！</li><a class="btn" href="https://colab.research.google.com">前往google colab</a>
+                            <li><a href="fileoperation64.html">文件基本操作win10</a></li>
+                            <li><a href="computconfiguration.html">电脑配置相关win10</a></li>
+                            <li><a>文件基本操作win7</a></li>
+                            <li><a>电脑配置相关win7</a></li>
+                            <li><a href="download.html">下载相关软件</a></li>
                         </ul>
-                    </div>
-                    <div class="step">
-                        <h3>设置代码笔记本</h3>
-                        <p>新建一个python3笔记本</p>
-                        <img src="../image/tutorials/google/01.png">
-                    </div>
-                    <div class="step">
-                        <h3>添加代码</h3>
-                        <p>将一下三段代码添加到三个不同的代码单元格中</p>
-                        <img src="../image/tutorials/google/02.png">
-                        <code>
-                            !git clone https://github.com/liujn2018/run_lz_in_gg.git
-                            !apt install qt5-default qt5-qmake curl
-                            !apt install libboost-dev libboost-program-options-dev libopenblas-dev opencl-headers ocl-icd-opencl-dev
-                            !apt update
-                            !apt -qq install --no-install-recommends nvidia-opencl-icd-384
-                            !wget http://launchpadlibrarian.net/352962266/nvidia-opencl-icd-384_384.111-0ubuntu0.17.10.1_amd64.deb
-                            !apt install -f ./nvidia-opencl-icd-384_384.111-0ubuntu0.17.10.1_amd64.deb
-                            !apt -qq install --no-install-recommends nvidia-opencl-dev
-                        </code>
-                        <code>
-                            !cd run_lz_in_gg && ./autogtp -k sgf
-                        </code>
-                        <code>
-                            !kill -9 -1
-                        </code>
-                        <p>保存代码，并设置GPU硬件加速</p>
-                        <img src="../image/tutorials/google/03.png">
-                    </div>
-                    <div class="step">
-                        <h3>运行代码</h3>
-                        <p>先运行第一段安装leelazero，再运行第二段训练程序。如果运行训练程序出错，那么请运行第三段代码后，刷新页面再从头开始。</p>
-                        <img src="../image/tutorials/google/04.png">
-                        <p>正确运行如下图，大约10~20分钟一局自对弈。别关闭网页即可。google免费GPU每天只提供12小时使用时间。第二天需要重新打开网页运行一次。</p>
-                        <img src="../image/tutorials/google/05.png">
-                    </div>
-                </section>
+                    </li>
+                    <li>
+                        <p>常用软件</p>
+                        <ul>
+                            <li><a>自动训练程序</a></li>
+                            <li><a href="lizzie.html">lizzie</a></li>
+                            <li><a href="https://wei7.com/" target="_blank">wei7.com</a></li>
+                            <li><a href="sabaki.html">sabaki</a></li>
+                            <li><a href="gogui.html">GoGui</a></li>
+                            <li><a>手机app</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>进阶设置</p>
+                        <ul>
+                            <li><a href="arguments.html">leela参数讲解</a></li>
+                            <li><a href="google.html">谷歌免费GPU使用</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>常见错误</p>
+                        <ul>
+                            <li>错误解决方法</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <section>
+                <h2>谷歌免费GPU使用教程</h2>
+                <div class="step">
+                    <h3>准备:</h3>
+                    <ul>
+                        <li>科学上网（这个我没办法教大家，请自行解决）</li>
+                        <li>注册谷歌账号（注册不了就去淘宝购买）</li>
+                        <li>前往google colab，若无法访问请科学上网！</li><a class="btn" href="https://colab.research.google.com">前往google colab</a>
+                    </ul>
+                </div>
+                <div class="step">
+                    <h3>设置代码笔记本</h3>
+                    <p>新建一个python3笔记本</p>
+                    <img src="../image/tutorials/google/01.png">
+                </div>
+                <div class="step">
+                    <h3>添加代码</h3>
+                    <p>将一下三段代码添加到三个不同的代码单元格中</p>
+                    <img src="../image/tutorials/google/02.png">
+                    <code>
+                        !git clone https://github.com/liujn2018/run_lz_in_gg.git
+                        !apt install qt5-default qt5-qmake curl
+                        !apt install libboost-dev libboost-program-options-dev libopenblas-dev opencl-headers ocl-icd-opencl-dev
+                        !apt update
+                        !apt -qq install --no-install-recommends nvidia-opencl-icd-384
+                        !wget http://launchpadlibrarian.net/352962266/nvidia-opencl-icd-384_384.111-0ubuntu0.17.10.1_amd64.deb
+                        !apt install -f ./nvidia-opencl-icd-384_384.111-0ubuntu0.17.10.1_amd64.deb
+                        !apt -qq install --no-install-recommends nvidia-opencl-dev
+                    </code>
+                    <code>
+                        !cd run_lz_in_gg && ./autogtp -k sgf
+                    </code>
+                    <code>
+                        !kill -9 -1
+                    </code>
+                    <p>保存代码，并设置GPU硬件加速</p>
+                    <img src="../image/tutorials/google/03.png">
+                </div>
+                <div class="step">
+                    <h3>运行代码</h3>
+                    <p>先运行第一段安装leelazero，再运行第二段训练程序。如果运行训练程序出错，那么请运行第三段代码后，刷新页面再从头开始。</p>
+                    <img src="../image/tutorials/google/04.png">
+                    <p>正确运行如下图，大约10~20分钟一局自对弈。别关闭网页即可。google免费GPU每天只提供12小时使用时间。第二天需要重新打开网页运行一次。</p>
+                    <img src="../image/tutorials/google/05.png">
+                </div>
+            </section>
         </main>
 		<footer>
             <div class="inner">
